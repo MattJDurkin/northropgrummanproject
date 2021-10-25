@@ -4,7 +4,9 @@ import os
 import shutil
 
 currdir = str(pathlib.Path(__file__).parent.resolve())
-print(currdir + "/n")
+
+
+#copy over data from kaggle
 
 # with open('%s/train.csv' % currdir, newline='') as csvfile:
 #     reader = csv.reader(csvfile)
@@ -23,11 +25,22 @@ print(currdir + "/n")
 #         shutil.copy("%s\\train\images\%s" %(currdir,img), "%s\\categories\\cat1_1\%s" %(currdir,img))
 #         print(img)
 
-path2 = str(pathlib.Path(__file__).parent.parent.resolve()) + "\surfaced_submarine_photos"
+# copy sub pictures with new names
+
+# path2 = str(pathlib.Path(__file__).parent.parent.resolve()) + "\surfaced_submarine_photos"
+
+# iter = 0
+
+# for file in os.listdir(str(pathlib.Path(__file__).parent.parent.resolve()) + "\surfaced_submarine_photos"):
+#     shutil.copy("%s\\%s" %(path2,file), "%s\\categories\\sub\img_%d.jpg" %(currdir,iter))
+#     print(str(iter))
+#     iter += 1
+
+path3 = str(pathlib.Path(__file__).parent.parent.resolve()) + "\\fishing_boat_photos"
 
 iter = 0
 
-for file in os.listdir(str(pathlib.Path(__file__).parent.parent.resolve()) + "\surfaced_submarine_photos"):
-    shutil.copy("%s\\%s" %(path2,file), "%s\\categories\\sub\img_%d.jpg" %(currdir,iter))
+for file in os.listdir(str(pathlib.Path(__file__).parent.parent.resolve()) + "\\fishing_boat_photos"):
+    shutil.copy("%s\\%s" %(path3,file), "%s\\categories\\fishing\img_%d.jpg" %(currdir,iter))
     print(str(iter))
     iter += 1

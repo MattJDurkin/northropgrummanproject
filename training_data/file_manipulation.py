@@ -36,11 +36,21 @@ currdir = str(pathlib.Path(__file__).parent.resolve())
 #     print(str(iter))
 #     iter += 1
 
-path3 = str(pathlib.Path(__file__).parent.parent.resolve()) + "\\fishing_boat_photos"
+# path3 = str(pathlib.Path(__file__).parent.parent.resolve()) + "\\fishing_boat_photos"
+
+# iter = 0
+
+# for file in os.listdir(str(pathlib.Path(__file__).parent.parent.resolve()) + "\\fishing_boat_photos"):
+#     shutil.copy("%s\\%s" %(path3,file), "%s\\categories\\fishing\img_%d.jpg" %(currdir,iter))
+#     print(str(iter))
+#     iter += 1
+
+
+path4 = str(pathlib.Path(__file__).parent.parent.resolve()) + "\\aircraft_carrier_photos"
 
 iter = 0
 
-for file in os.listdir(str(pathlib.Path(__file__).parent.parent.resolve()) + "\\fishing_boat_photos"):
-    shutil.copy("%s\\%s" %(path3,file), "%s\\categories\\fishing\img_%d.jpg" %(currdir,iter))
+for file in os.listdir(str(pathlib.Path(__file__).parent.parent.resolve()) + "\\aircraft_carrier_photos"):
+    shutil.copy("%s\\%s" %(path4,file), "%s\\categories\\ac_carrier\img_%d.jpg" %(currdir,iter))
     print(str(iter))
     iter += 1
